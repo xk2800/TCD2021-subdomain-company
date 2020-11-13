@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name | Tech Career Days 2021</title>
+
+    <!--meta http-equiv = "refresh" content = "3; url = https://itsociety.rocks/" /-->
+</head>
+
+    <style>
+        *{
+            background-color: #15243C;
+        }
+    </style>
+    
+    <script>
+        /*COUNTDOWN SEND TO REDIRECTED PAGE*/
+        var timeleft = 5;
+                var downloadTimer = setInterval(function(){
+                document.getElementById("countdown").innerHTML = timeleft + " seconds";
+                timeleft -= 1;
+                if(timeleft <= -2){
+                    clearInterval(downloadTimer);
+                    document.getElementById("countdown").innerHTML = "0 seconds"
+                }
+                }, 1000);
+        /*REDIRECT*/
+                setTimeout(function(){
+                    window.location.href = 'https://itsociety.rocks/';
+                },5000);
+            </script>
+<body>
+    
+    <div class="message">
+        <h2><span>Please wait while we redirect within <span id="countdown">seconds</span></span></h2>
+    </div>
+
+    <div class="backup">
+        <h4></h4>
+    </div>
+
+</body>
+</html>
