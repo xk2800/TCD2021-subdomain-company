@@ -4,51 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Name | Tech Career Days 2021</title>
+    <link rel="icon" type="image/favicon" href="img/favicon_io/favicon.ico">
 
-    <!--meta http-equiv = "refresh" content = "3; url = https://itsociety.rocks/" /-->
-</head>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Function to connect different pages using jQuery -->
+    <script> 
+    $(function(){
+      //$("#navbar").load("navbar-index.html"); 
+      $("#navbar-sticky").load("nav-sticky-non-home.html");
+    });
+    </script>
 
     <style>
-        *{
-            background-color: #15243C;
+        body, html{
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            overflow: hidden;
         }
-        .message, .backup{
-            color: white;
-            text-align: center;
-        }
-        .redirect:link, .redirect:visited{
-            color: white;
-        }
-        .redirect:hover{
-            color: red;
+        .page{
+            position:absolute; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+            top: 0px;
+            
         }
     </style>
-    
-    <script>
-        /*COUNTDOWN SEND TO REDIRECTED PAGE*/
-        var timeleft = 5;
-                var downloadTimer = setInterval(function(){
-                document.getElementById("countdown").innerHTML = timeleft + " seconds";
-                timeleft -= 1;
-                if(timeleft <= -2){
-                    clearInterval(downloadTimer);
-                    document.getElementById("countdown").innerHTML = "0 seconds"
-                }
-                }, 1000);
-        /*REDIRECT*/
-                setTimeout(function(){
-                    window.location.href = 'https://itsociety.rocks/';
-                },5000);
-            </script>
+</head>
 <body>
-    
-    <div class="message">
-        <h2><span>Please wait while we redirect within <span id="countdown">seconds</span></span></h2>
-    </div>
 
-    <div class="backup">
-        <h4>If you are not redirected, click <a href="https://itsociety.rocks/" class="redirect">HERE</a></h4>
-    </div>
+    <!-- Navbar -->
+    <div id="navbar-sticky"></div>
 
+    <div class="page">
+        <iframe width="100%" height="100%" src="https://opportunityboard.herokuapp.com/" frameborder="0" class="page"></iframe>
+    </div>
 </body>
 </html>
